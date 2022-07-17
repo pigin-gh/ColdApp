@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ColdApp</string>
+    <string name="info">Информация</string>
+    <string name="main_page">Главная</string>
+    <string name="good_afternoon">Добрый день!</string>
+
+    <!--    Home Screen-->
+
+    <!--    Menus-->
+
 </resources>
