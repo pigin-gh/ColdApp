@@ -8,15 +8,14 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="@string/main_page"
-            app:titleCentered="true"
             app:menu="@menu/home"
-            />
+            app:title="@string/main_page"
+            app:titleCentered="true" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -29,79 +28,80 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/top_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/top_layout">
+                android:orientation="horizontal">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/greeting_tv"
+                    style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/good_afternoon"
-                    style="@style/TextAppearance.Material3.TitleLarge"/>
+                    android:text="@string/good_afternoon" />
 
             </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/top_card_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/top_layout"
                 android:layout_marginTop="12dp">
 
                 <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.Material3.CardView.Filled"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    app:cardCornerRadius="12dp"
-                    style="@style/Widget.Material3.CardView.Filled" >
+                    app:cardCornerRadius="12dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <LinearLayout
+                            android:id="@+id/circle_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/circle_blue"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="16dp"
-                            android:id="@+id/circle_layout"
-                            android:orientation="horizontal"
-                            android:gravity="center">
+                            android:background="@drawable/circle_blue"
+                            android:gravity="center"
+                            android:orientation="horizontal">
 
                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/current_day_of_illness_tv"
+                                style="@style/TextAppearance.Material3.TitleMedium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="1"
-                                android:id="@+id/current_day_of_illness"
-                                style="@style/TextAppearance.Material3.TitleMedium"
-                                android:textColor="@color/white"/>
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
                         <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/circle_layout"
                             android:layout_centerVertical="true"
-                            android:layout_marginStart="16dp">
+                            android:layout_marginStart="16dp"
+                            android:layout_toEndOf="@id/circle_layout">
 
                             <com.google.android.material.textview.MaterialTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Сутки болезни"
+                                android:id="@+id/days_of_illness_tv"
                                 style="@style/TextAppearance.Material3.TitleMedium"
-                                android:id="@+id/days_of_illness"
-                                />
-
-                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Данные ещё не занесены"
+                                android:text="Сутки болезни" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/data_entered_tv"
                                 style="@style/TextAppearance.Material3.TitleSmall"
-                                android:id="@+id/data_entered"
-                                android:layout_below="@id/days_of_illness"/>
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/days_of_illness_tv"
+                                android:text="Данные ещё не занесены" />
                         </RelativeLayout>
 
                     </RelativeLayout>
@@ -110,6 +110,40 @@
 
             </RelativeLayout>
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/write_data_bt"
+                style="@style/Widget.Material3.Button.TonalButton.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_card_layout"
+                android:layout_marginTop="8dp"
+                android:text="@string/write_data"
+                app:icon="@drawable/ic_baseline_mode_24"
+                app:iconGravity="textStart" />
+
+            <LinearLayout
+                android:id="@+id/previous_records_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/write_data_bt"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/previous_records"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/previous_records" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/previous_records_layout"
+                android:layout_marginTop="8dp" />
 
         </RelativeLayout>
 
@@ -123,6 +157,5 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
         android:src="@drawable/ic_baseline_mode_24" />
-
 
 </RelativeLayout>

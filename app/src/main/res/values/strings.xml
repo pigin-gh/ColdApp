@@ -3,6 +3,8 @@
     <string name="info">Информация</string>
     <string name="main_page">Главная</string>
     <string name="good_afternoon">Добрый день!</string>
+    <string name="write_data">Записать данные</string>
+    <string name="previous_records">Предыдущие записи</string>
 
     <!--    Home Screen-->
 
