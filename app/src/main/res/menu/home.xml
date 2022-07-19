@@ -6,4 +6,9 @@
         android:title="@string/info"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_baseline_info_24"/>
+
+    <item
+        android:id="@+id/finish_recording"
+        android:title="@string/finish_recording"
+        app:showAsAction="never" />
 </menu>

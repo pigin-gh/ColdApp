@@ -5,6 +5,11 @@
     <string name="good_afternoon">Добрый день!</string>
     <string name="write_data">Записать данные</string>
     <string name="previous_records">Предыдущие записи</string>
+    <string name="finish_recording">Закончить запись</string>
+    <string name="details_page">Детали</string>
+    <string name="top_question">Какие симптомы сегодня?</string>
+    <string name="add">Добавить</string>
+    <string name="no_records">Здесь будут появляться ваши записи</string>
 
     <!--    Home Screen-->
 

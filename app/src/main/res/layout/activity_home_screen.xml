@@ -22,13 +22,13 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:paddingHorizontal="16dp"
-        android:paddingTop="8dp">
+        android:layout_marginTop="?attr/actionBarSize">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp">
 
             <LinearLayout
                 android:id="@+id/top_layout"
@@ -56,6 +56,9 @@
                     style="@style/Widget.Material3.CardView.Filled"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/paleColor2"
                     app:cardCornerRadius="12dp">
 
                     <RelativeLayout
@@ -104,6 +107,14 @@
                                 android:text="Данные ещё не занесены" />
                         </RelativeLayout>
 
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/ic_baseline_start_24" />
+
                     </RelativeLayout>
 
                 </com.google.android.material.card.MaterialCardView>
@@ -117,6 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/top_card_layout"
                 android:layout_marginTop="8dp"
+                android:backgroundTint="@color/paleColor1"
                 android:text="@string/write_data"
                 app:icon="@drawable/ic_baseline_mode_24"
                 app:iconGravity="textStart" />
@@ -138,12 +150,29 @@
 
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/previous_records_layout"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/splash_text"
+                    style="@style/TextAppearance.Material3.BodyLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/no_records"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
 
