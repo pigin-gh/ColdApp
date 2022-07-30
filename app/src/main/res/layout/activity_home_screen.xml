@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeScreen">
+    tools:context=".presentation.home.HomeScreen">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                                 style="@style/TextAppearance.Material3.TitleMedium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Сутки болезни" />
+                                android:text="@string/day_of_illness" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/data_entered_tv"
@@ -104,7 +104,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/days_of_illness_tv"
-                                android:text="Данные ещё не занесены" />
+                                android:text="@string/data_not_entered" />
                         </RelativeLayout>
 
                         <LinearLayout
@@ -184,7 +184,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_baseline_mode_24" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_mode_24"
+        android:backgroundTint="@color/paleColor2"/>
 
 </RelativeLayout>

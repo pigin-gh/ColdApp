@@ -8,9 +8,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ColdApp">
-        <activity android:name=".DetailsScreen"
+        <activity android:name=".presentation.details.DetailsScreen"
             android:exported="true"/>
-        <activity android:name=".HomeScreen"
+        <activity android:name=".presentation.home.HomeScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
