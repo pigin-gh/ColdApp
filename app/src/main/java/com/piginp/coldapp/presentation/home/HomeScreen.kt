@@ -4,8 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.piginp.coldapp.R
+import com.piginp.coldapp.domain.usecase.*
 
 class HomeScreen : AppCompatActivity() {
+
+    private val getDayEntryStatusUseCase = GetDayEntryStatusUseCase()
+    private val getCurrentDayUseCase = GetCurrentDayUseCase()
+    private val getListOfDaysEntriesUseCase = GetCurrentDayUseCase()
+    private val addEntryToCurrentDayUseCase = AddEntryToCurrentDayUseCase()
+    private val clearAllEntriesUseCase = ClearAllEntriesUseCase()
+    private val showEntryDetailsUseCase = ShowEntryDetailsUseCase()
 
 //    private lateinit var viewModel: HomeViewModel
 
