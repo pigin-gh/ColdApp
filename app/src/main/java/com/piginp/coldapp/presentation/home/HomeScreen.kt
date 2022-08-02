@@ -8,6 +8,8 @@ import com.piginp.coldapp.domain.usecase.*
 
 class HomeScreen : AppCompatActivity() {
 
+    // TEST
+
     private val getDayEntryStatusUseCase = GetDayEntryStatusUseCase()
     private val getCurrentDayUseCase = GetCurrentDayUseCase()
     private val getListOfDaysEntriesUseCase = GetCurrentDayUseCase()
